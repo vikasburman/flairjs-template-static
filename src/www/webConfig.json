@@ -1,22 +1,6 @@
 {
     "global": {
         "flair": {
-            "api": {
-                "connections": {
-                    "connection1": {
-                        "R": {
-                            "local": "http://localhost:8080",
-                            "dev": "http://localhost:8080",
-                            "test": "",
-                            "prod": ""
-                        },
-                        "V": "",
-                        "L": "",
-                        "P": "",
-                        "G": ""
-                    }
-                }
-            }             
         }
     },
 
@@ -64,9 +48,6 @@
     "flair.client": {
         "view": {
             "transition": "",
-            "static": {
-                "root": "./pages/"
-            },
             "routes": {
                 "home": "myapp.feature1.views.home",
                 "notfound": "myapp.feature1.views.notfound"

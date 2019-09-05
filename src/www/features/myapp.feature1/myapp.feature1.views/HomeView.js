@@ -1,5 +1,5 @@
 const { VueView } = await ns('flair.ui');
-const ServerDateTime = await include('myapp.feature1.services.ServerDateTime');
+const ClientDateTime = await include('myapp.feature1.services.ClientDateTime');
 
 /**
  * @name HomeView
@@ -16,9 +16,6 @@ Class('(auto)', VueView, function() {
 
     $$('override');
     this.loadData = async (base, ctx, el) => { // eslint-disable-line no-unused-vars
-        this.data.now = await ServerDateTime.now(this.abortHandle('serverTime'));
-        // note: by calling this.abort('serverTime') any long running service call 
-        // can be aborted on choice here, otherwise if page load aborted in between 
-        // cancelLoadData call will do it automatically for all such abortHandles
+        this.data.now = await ClientDateTime.now();
     };
 });

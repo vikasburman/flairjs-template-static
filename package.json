@@ -33,25 +33,18 @@
         "flag": "flair flag --options ./config/build/options.json",
         "test": "flair test --options ./config/test/options.json",
         "test-client": "flair test --options ./config/test/options.json --client",
-        "serve": "nodemon --watch ./src --delay 5 --ext js,css,html,json,png,jpg,gif,xml --exec 'yarn build-quick && cd ./dist && node --inspect main.js'",
+        "serve": "http-server ./dist -p8080 && pkill -f http-server",
         "deploy": "cd ./dist && echo '** define deploy command **'",
-        "start": "cd ./dist && pm2 start main.js",
-        "stop": "pm2 stop main",
         "refresh": "yarn remove flairjs-cli && yarn remove flairjs && yarn remove flairjs-fabric && yarn add flairjs-cli --dev && yarn add flairjs && yarn add flairjs-fabric"
     },
     "devDependencies": {
         "flairjs-cli": "^0.59.0",
-        "nodemon": "^1.19.2"
+        "http-server": "^0.11.1"
     },
     "dependencies": {
-        "cors": "^2.8.5",
-        "express": "^4.17.1",
         "flairjs": "^0.59.0",
         "flairjs-fabric": "^0.59.0",
-        "http-shutdown": "^1.2.1",
-        "pm2": "^3.5.1",
         "requirejs": "^2.3.6",
-        "showdown": "^1.9.0",
         "vue": "^2.6.10"
     }
 }

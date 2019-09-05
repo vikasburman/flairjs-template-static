@@ -9,14 +9,7 @@
             "request": "launch",
             "name": "Client Mode",
             "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}/dist/www"
-        },        
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Server Mode",
-            "program": "${workspaceFolder}/dist/main.js",
-            "cwd": "${workspaceFolder}/dist"
+            "webRoot": "${workspaceFolder}/dist"
         }
     ]
 }

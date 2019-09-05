@@ -1,38 +1,14 @@
 {
     "plugins": [
-        { "name": "node_modules", "settings": { "cmd": "yarn install --prod" } },
         { "name": "write_flags", "settings": { "defaultFlag": "dev" } }
     ],    
     "build": [
-        { "profile": "server" },
         { "profile": "client" }
     ],
     "profiles": {
-        "server": {
-            "dest": "/",
-            "skipMinify": true,
-            "build": [
-                "app",
-                "features"
-            ],
-            "plugins": ["copy_files", "node_modules", "write_flags"],
-            "copy": [
-                "private",
-                "appConfig.json",
-                "~/node_modules/flairjs-fabric/flair.server/main.js >> ./main.js"
-            ],
-            "flags": {
-                "dev": {
-                    "FLAIR_SYMBOLS": "DEV,DEBUG"
-                },
-                "prod": {
-                    "FLAIR_SYMBOLS": "PROD"
-                }
-            }
-        },
         "client": {
             "root": "www",
-            "dest": "@server",
+            "dest": "/",
             "omitRoot": true,
             "build": [
                 "app",
@@ -41,7 +17,6 @@
             "plugins": ["copy_files", "web_modules", "minify_files", "write_flags"],
             "copy": [
                 "assets",
-                "pages",
                 "favicon.png",
                 "webConfig.json",
                 "~/node_modules/flairjs-fabric/flair.client/index.html >> ./index.html",
@@ -51,8 +26,7 @@
                 "flairjs",
                 "flairjs-fabric",
                 "requirejs",
-                "vue/dist",
-                "showdown/dist"
+                "vue/dist"
             ],
             "minify": [
                 "modules/requirejs/require.js"
