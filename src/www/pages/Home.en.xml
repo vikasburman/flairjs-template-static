@@ -1,0 +1,74 @@
+<page title="@titles.home | Home">
+    <html><![CDATA[ 
+    <div class="center">
+        <div class="card">
+            <img class="center-img" width="50" height="50" src="./assets/images/logo.png"/>
+            <p></p>
+            <h1>{{ i18n('@strings.hello | Hello World!') }}</h1>
+            <h4>Static Data</h4>
+            <h2>{{ something }}</h2>
+        </div>
+    </div>
+    ]]></html>
+
+    <style><![CDATA[ 
+    #SCOPE_ID .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    }
+
+    #SCOPE_ID .card {
+    width: 450px;
+    height: 275px;
+    background: linear-gradient(#3679AA, #469C9E);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    color: #fff;
+    }
+
+    #SCOPE_ID .center-img {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-25%, -50%);
+    text-align: center;
+    }
+
+    #SCOPE_ID .card h1 {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);  
+    text-align: center;
+    }
+
+    #SCOPE_ID .card h2 {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);  
+    text-align: center;
+    font-size: 2rem;
+    }
+
+    #SCOPE_ID .card h4 {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);  
+    text-align: center;
+    font-size: 1.2rem;
+    }
+    ]]></style>
+    
+    <data><![CDATA[ 
+    {
+        "something": "Static Content Is Fun!"
+    }
+    ]]></data>
+</page>

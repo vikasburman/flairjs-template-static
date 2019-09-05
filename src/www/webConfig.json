@@ -48,9 +48,12 @@
     "flair.client": {
         "view": {
             "transition": "",
+            "static": {
+                "root": "./pages/"
+            },            
             "routes": {
-                "home": "myapp.feature1.views.home",
-                "notfound": "myapp.feature1.views.notfound"
+                "home": "myapp.main.home",
+                "notfound": "myapp.main.notfound"
             }
         }, 
 
@@ -97,6 +100,11 @@
     "flair.client.vue": {
         "vue": {
             "extensions": []
-        }
+        },
+
+        "static": {
+            "layout": "myapp.shared.views.CommonLayout",
+            "i18n": "./pages/locales"
+        }         
     }
 }

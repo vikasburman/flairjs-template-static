@@ -1,0 +1,4 @@
+[
+    { "name": "home", "handler": "./Home{.en}.xml", "mount": "main", "path": "/" },
+    { "name": "notfound", "handler": "./Error404{.en}.xml", "mount": "main", "path": "/404" }
+]
