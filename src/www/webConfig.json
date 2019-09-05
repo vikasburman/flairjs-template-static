@@ -18,8 +18,7 @@
             "scripts": [
             ],
             "preambles": [
-                "./app",
-                "./features"
+                "./app"
             ],
             "ports": {
             },       
@@ -104,7 +103,7 @@
 
         "static": {
             "layout": "myapp.shared.views.CommonLayout",
-            "i18n": "./pages/locales"
+            "i18n": "strings, titles"
         }         
     }
 }

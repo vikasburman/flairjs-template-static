@@ -3,7 +3,7 @@
     "title": "yourapp name",
     "description": "yourapp description",
     "copyright": "yourapp copyright",
-    "version": "0.58.99",
+    "version": "0.59.3",
     "author": "yourapp author <yourapp@yourhost.domain>",
     "keywords": [
         "flairjs",
@@ -43,7 +43,7 @@
     },
     "dependencies": {
         "flairjs": "^0.59.0",
-        "flairjs-fabric": "^0.59.0",
+        "flairjs-fabric": "^0.59.1",
         "requirejs": "^2.3.6",
         "vue": "^2.6.10"
     }
