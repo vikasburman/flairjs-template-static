@@ -13,7 +13,6 @@
                     "build": [
                         "app"
                     ],
-                    "plugins": ["copy_files", "web_modules", "minify_files", "write_flags"],
                     "copy": [
                         "assets",
                         "pages",
